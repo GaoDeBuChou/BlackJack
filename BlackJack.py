@@ -1,5 +1,6 @@
 import os
 import random
+import time
 
 
 def shuffle(new_poker):
@@ -59,6 +60,9 @@ def play(poker, poker_to_view, i, person):
 def dealer(poker, poker_to_view, i, person):
     x = 3
     while calc(person) < 17:
+        now = time.time()
+        while time.time() < now + 1:
+            pass
         deal(poker, poker_to_view, i, x, person)
         i += 1
         x += 1
